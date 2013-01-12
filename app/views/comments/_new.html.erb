@@ -1,0 +1,7 @@
+<%= form_for :comment,:url => comments_path, :method => :post do |form| %>
+<br/>
+	<%= form.text_area :body, :rows => '2' %><br/>
+	<%= form.hidden_field :article_id, :value => @article.id %><br/>
+	<%= submit_tag "Save" %>
+<% end %>
+</div>

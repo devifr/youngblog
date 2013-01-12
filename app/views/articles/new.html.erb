@@ -1,0 +1,13 @@
+<div id='wrapper'>
+<h1>Create New Article</h1>
+<%= form_for :article,:url => {:action => :create} do |form| %>
+<div id='content'>
+Title: <%= form.text_field :title, :size=>60 %><br/>
+Description: <%= form.text_area :description %><br/>
+<%= form.hidden_field :user_id, :value => current_user.id %><br/>
+<%= submit_tag "Save" %>
+<% end %>
+</div>
+
+<%= link_to 'Back', articles_path %>
+</div>

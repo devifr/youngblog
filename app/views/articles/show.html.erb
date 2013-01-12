@@ -1,0 +1,17 @@
+<div id='wrapper'><h1><%= @article.title%></h1>
+	<%= @article.user.email %>
+	<div id='main'>
+		<div id='content'><%= @article.description %> </div>
+		<br/>
+		<div id='comments'>	
+			Comments
+			<br/>
+				<% @comments.each do |com| %>
+				<%= com.body %><br/>
+				<% end %>
+	</div>
+<div id='comment'>
+	New Comment
+	<%= render :partial => "comments/new" %>
+	<div><%= link_to '<<Back', articles_path %> </div>
+</div>

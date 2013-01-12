@@ -1,0 +1,21 @@
+<div id='wrapper'>
+	<% if user_signed_in? %>
+ 		<%=current_user.email%>, <%= link_to 'Logout',destroy_user_session_path, :method => 'delete' %>
+ 	<% else %>
+ 		Belum Login
+ 	<% end %>
+	
+	<h1>All Articles</h1>
+	<div id='new'><%= link_to 'Create', new_article_path %></div>
+<div id='main'>
+<% @articles.each do |art| %>
+	<div id='title'><%= art.title %></div>
+	<div id='content'><%= art.description %> <%= link_to 'Read More', article_path(art.id) %> | 
+		 <% if pemilik?(art)%> 
+			<%= link_to 'Edit', edit_article_path(art.id) %> | <%= link_to 'Delete', article_path(art.id), :method=>'delete', data: { confirm: "Kamu yakin menghapus data ini?" } %> 
+		<% end %> 
+	</div>
+<% end %>
+</div>
+<div id='paginate'><%=paginate @articles%></div>
+</div>

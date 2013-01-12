@@ -1,0 +1,11 @@
+<div id='wrapper'>
+<h1>Edit <%=@article.title%></h1>
+<%= form_for :article, :url => article_path(@article.id), :html => {:method => :put} do |form| %>
+<div id='content'>
+Title: <%= form.text_field :title, :size=>60,:value=>@article.title %><br/>
+Description: <%= form.text_area :description,:value=>@article.description%><br/>
+<%= submit_tag "Save" %>
+<% end %>
+</div>
+<%= link_to 'Back', articles_path %>
+</div>
