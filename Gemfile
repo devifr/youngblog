@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.7'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'omniauth'
 gem 'omniauth-facebook'
