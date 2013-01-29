@@ -10,6 +10,7 @@ gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
+gem 'pg'
 gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
 #gem 'will_paginate' , '~> 3.0'
 
