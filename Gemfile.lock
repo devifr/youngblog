@@ -150,6 +150,7 @@ DEPENDENCIES
   devise!
   jquery-rails
   kaminari!
+  oauth2
   omniauth
   omniauth-facebook
   rails (= 3.2.8)

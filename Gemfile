@@ -7,10 +7,11 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
-gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
-#gem 'will_paginate' , '~> 3.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'oauth2'
+gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
+#gem 'will_paginate' , '~> 3.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
