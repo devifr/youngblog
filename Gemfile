@@ -4,14 +4,12 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3', '~> 1.3.7'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
-gem 'pg'
 gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
+
 #gem 'will_paginate' , '~> 3.0'
 
 # Gems used only for assets and not required
@@ -27,6 +25,16 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+group :development do
+gem 'sqlite3', '~> 1.3.7'
+end
+
+
+group :production do
+gem 'pg'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
